@@ -1,0 +1,38 @@
+<!--
+Filename: _h0_layout.html
+Title: Selbac - Layout html
+Author: Raghava | GitHub: @raghavtwenty
+Date Created: May 20, 2023 | Last Updated: May 20, 2024
+Language: HTML5 | Version: Safari
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/_c0_css.css') }}">
+    <title>SELBAC</title>
+</head>
+
+<body>
+    <header>
+        <h1>SELBAC</h1>
+        <h3>Cable Cost Estimator using Boruvka Algorithm</h3>
+    </header>
+
+    {% block body %}
+    {% endblock %}
+
+    <footer>
+        © Designed & Developed by Farhaan, Naveen, Raghava
+        <br>
+        GitHub: <a href="https://github.com/raghavtwenty" target="_blank" style="color: #00008B;">@raghavtwenty</a>
+        <br>
+        Date Created: May 20, 2023 | Last Updated: May 20, 2024
+        <br>
+        Version Info: 1.20052024 | Stable Release
+    </footer>
+</body>
+
+</html>

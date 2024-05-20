@@ -1,0 +1,26 @@
+<!--
+Filename: _h1_j0_home.html
+Title: Selbac - home html
+Author: Raghava | GitHub: @raghavtwenty
+Date Created: May 20, 2023 | Last Updated: May 20, 2024
+Language: HTML5 | Version: Safari
+-->
+
+{% extends "_h0_layout.html" %}
+
+{% block body %}
+<div class="flex-container">
+    <div class="card">
+        <div id="div1">
+            <label> Enter the total number of connecting edges between houses</label>
+        </div>
+        <div id="div2">
+            <input type="number" id="hTotalNodes" min="1">
+        </div>
+        <div>
+            <button class="button-33" onclick="hHomeSubmit()">Next</button>
+        </div>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/_j0_home.js') }}"></script>
+{% endblock %}

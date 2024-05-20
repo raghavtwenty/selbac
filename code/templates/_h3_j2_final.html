@@ -1,0 +1,47 @@
+<!--
+Filename: _h3_j2_final.html
+Title: Selbac - Display final result and graph
+Author: Raghava | GitHub: @raghavtwenty
+Date Created: May 20, 2023 | Last Updated: May 20, 2024
+Language: HTML5 | Version: Safari
+-->
+
+
+{% extends "_h0_layout.html" %}
+
+{% block body %}
+<div class="flex-container">
+    <div class="card">
+        <center>
+        <label>RESULT</label>
+        <label>LEAST PATH COST - {{ hFinalCost }}</label>
+        </center>
+        <label>OPTIMAL PATH</label>
+        <table>
+            <thead>
+                <tr>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Distance</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in range(hStartingHouses|length) %}
+                <tr>
+                    <td>{{ hStartingHouses[i] }}</td>
+                    <td>{{ hConnectingHouses[i] }}</td>
+                    <td>{{ hDistances[i] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <br>
+        <label>NETWORK DIAGRAM</label>
+        <img src="static/images/networkgraph.png" alt="Network Image" style="max-width: 100%; height: auto;">
+        <div>
+            <button class="button-33" onclick="jBackHome()">Home</button>
+        </div>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/_j2_backhome.js') }}"></script>
+{% endblock %}
